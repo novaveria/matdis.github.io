@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* Warna teks default */
+    overflow: hidden; /* Mencegah scroll jika gambar terlalu besar */
+}
+
+/* Header utama */
+.main-header {
+    width: 100%;
+    height: 60px;
+    background: rgba(30, 30, 30, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.13);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 8px;
+    min-width: 170px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    padding: 8px 0;
+    z-index: 100;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block  ;
+    padding: 10px 22px;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 0;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255,255,255,0.10);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Supaya konten tidak tertutup header */
+/* Container utama about */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 0;
+    width: 100vw;
+    text-align: center;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card about */
+.about {
+    width: 50vw;
+    min-width: 320px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.18);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);  
+    padding: 32px 28px 28px 28px;
+    text-align: center;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.container h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 2.2em;
+    color: #fff;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #fff;
+    margin: 0;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0 0;
+}
+
+.about ul li {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 6px;
+    font-family: "Raleway", sans-serif;
+}
+
+.about h3 {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+.card-container {
+    margin-top: 80px;
+}
+
+.background-image {
+    position: fixed; /* Menjadikan gambar latar belakang tetap */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg'); /* GANTI DENGAN URL GAMBAR COCMU */
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar */
+    filter: brightness(0.6); /* Membuat gambar sedikit lebih gelap agar teks putih lebih jelas */
+    z-index: -1; /* Posisikan di belakang konten */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Memastikan container setinggi viewport */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15); /* Glassmorphism transparan */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* Header aplikasi (bar atas) */
+.card-header {
+    width: 100%;
+    height: 32px;
+    background: rgba(255,255,255,0.25);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-header .window-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.card-header .window-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.7;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.card-header .window-btn.red { background: #ff5f56; }
+.card-header .window-btn.yellow { background: #ffbd2e; }
+.card-header .window-btn.green { background: #27c93f; }
+
+/* Tambahkan padding atas pada card agar isi tidak tertutup header */
+.card > *:not(.card-header) {
+    margin-top: 32px;
+}
+
+h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 2.5em; /* Ukuran font lebih besar */
+    color: #fff; /* Warna gelap untuk judul */
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Huruf kapital */
+    letter-spacing: 2px;
+    
+}
+
+h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar tombol opsi */
+    margin-top: 30px;
+}
+
+button {
+    background-color: #3a3b26; /* Biru terang */
+    color: white;
+    border: none;   
+    padding: 15px 25px; /* Padding lebih besar */
+    border-radius: 8px; /* Sudut tombol membulat */
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1em; /* Ukuran font tombol */
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: #1a1a1a; /* Biru lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek sedikit naik */
+}
+
+/* Tombol opsi di dalam container options */
+.options button {
+    background-color: #3a3b26; /* Warna hijau untuk opsi */
+}
+
+.options button:hover {
+    background-color: #27ae60; /* Hijau lebih gelap saat hover */
+}
+
+.hidden {
+    display: none;
+}

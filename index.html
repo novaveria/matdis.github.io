@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimasi Builder Clash of Clans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <span>Builder Optimizer</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="https://supercell.com/en/games/clashofclans/">Games</a>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="background-image"></div>
+    <div class="card-container">
+        <div id="start-screen" class="card">
+            <div class="card-header">
+                <div class="window-buttons">
+                    <div class="window-btn red"></div>
+                    <div class="window-btn yellow"></div>
+                    <div class="window-btn green"></div>
+                </div>
+            </div>
+            <h1>TEMUKAN PILIHAN TERBAIK</h1>
+            <button onclick="startQuiz()">MULAI</button>
+        </div>
+
+        <div id="question-area" class="card hidden">
+            <div class="card-header">
+                <div class="window-buttons">
+                    <div class="window-btn red"></div>
+                    <div class="window-btn yellow"></div>
+                    <div class="window-btn green"></div>
+                </div>
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="options-container" class="options"></div>
+        </div>
+
+        <div id="result-area" class="card hidden">
+            <div class="card-header">
+                <div class="window-buttons">
+                    <div class="window-btn red"></div>
+                    <div class="window-btn yellow"></div>
+                    <div class="window-btn green"></div>
+                </div>
+            </div>
+            <h2>REKOMENDASI UPGRADE:</h2>
+            <p id="result-text"></p>
+            <button onclick="restartQuiz()">MULAI ULANG</button>
+        </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
